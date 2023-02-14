@@ -8,10 +8,10 @@ there are four API
 3. Get Customer detail through JWT token
 4. Reset password via JWT token with encryption hash
 
-Postmen Collection file
+Postmen Collection file <br>
 Customer-api.postman_collection.json
 
-Mysql database file
+Mysql database file <br>
 customers.sql
 
 
