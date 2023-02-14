@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "d1376cf5-40d6-4be1-a2ab-0d74194189cf",
+		"name": "Customer-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25551523"
+	},
+	"item": [
+		{
+			"name": "register-api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "krupal",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "krupal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "krupal",
+							"type": "text"
+						},
+						{
+							"key": "profilepic",
+							"type": "file",
+							"src": "/D:/pic/Profile.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4004/app/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"app",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"anuj\",\r\n    \"password\" : \"anujbhai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4004/app/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"app",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-info-via-token-api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTYsInVzZXJuYW1lIjoicmF2aSIsImVtYWlsIjoicmF2aUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQyMCRGRldZemJPM1FKckdnTFZGNElETkh1YnJsZmQ5Q0hyQmZqeWs5UG9JWG15Z0VNQ0ZqRzJRZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDItMTRUMDc6MzI6MDEuNzExWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDItMTRUMDc6MzI6MDEuNzEzWiJ9.NVX2kEw6EFznBtk3oB9fMGxUg2nRZ5QrLYK7H9eo7ZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4004/app/verifyuser",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"app",
+						"verifyuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset-password-api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAsInVzZXJuYW1lIjoicmFqdSIsImVtYWlsIjoicmFqdUBnbWFpbC5jb20iLCJwYXNzd29yZCI6MTExMzMzLCJjcmVhdGVkQXQiOiIyMDIzLTAyLTE0VDA1OjQyOjU4LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTAyLTE0VDA1OjQyOjU4LjAwMFoifQ.Y2xv5PsTLIuDehXPL1CFidrZRRRQRpxUciKCWSu0jiU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "101010",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\" : \"111444\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4004/app/resetpassword",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"app",
+						"resetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
