@@ -23,12 +23,14 @@ exports.registerapi = async function (req, res) {
         const salt = await bcrypt.genSalt(10);
         const value2 = await bcrypt.hash(value, salt);
         var file = req.file.fieldname;
+        const filepath = "D:/OFFICE/customer-api/src/image/" + `${file.fieldname}_${Date.now()}`;
+        console.log(file);
 
         const register = await db.customers.create({
             username: req.body.username,
             email: req.body.email,
             password: value2,
-            profilepic: `${file.fieldname}_${Date.now()}}`,
+            profilepic: filepath,
             createdAt: new Date(),
             updatedAt: new Date(),
 
